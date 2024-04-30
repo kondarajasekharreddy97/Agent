@@ -1,0 +1,71 @@
+Phase-1
+=======
+
+Network Environment for 
+
+ To Keep our Resources Private
+ To Keep our Resources Isolated
+ To Keep our Resource Secure
+
+Kubernetes Cluster Setup For Deployment of Application
+
+Virtual Machines for SonarQube, Nexus, Jenkins , Monitoring
+
+
+Phase-2
+=======
+
+Create GitHub Account
+Push Code to GitHub
+
+Phase-3
+========
+
+CI/CD Pipeline
+
+
+
+
+Security Group
+==============
+
+Allow the Following Ports in Security Group
+
+S.NO      TYPE        PROTOCOL     PORT RANGE       SOURCE
+
+1.        SMTP          TCP           25           MYIP/ANYWHERE
+2.      Custom TCP      TCP         3000-10000     MYIP/ANYWHERE
+3.        HTTP          TCP           80           MYIP/ANYWHERE
+4.        HTTPS         TCP           443          MYIP/ANYWHERE
+5.        SSH           TCP           22           MYIP/ANYWHERE
+6.      Custom TCP      TCP           6443         MYIP/ANYWHERE
+7.        SMTPS         TCP           465          MYIP/ANYWHERE
+8.      Custom TCP      TCP        30000-32767     MYIP/ANYWHERE
+
+
+
+SetUp Kubernetes Cluster with 3 EC2-Instances
+
+1 is Mater Node
+Remaining 2 are Worker Nodes
+
+ Master Node
+ Worker Node -1 
+ Worker Node -2
+
+
+Configure Plugins
+=================
+
+Go to Manage Jenkins  ----> Tools 
+----> JDK ---> Give Name ----> jdk17 ---> Install Automatically  ---->  add installer   ---->  install from adoptium.net ---> give version ---->  jdk-17.09.9
+
+
+---> Sonarqube Scanner Installations   --->  add Sonarqube Scanner  ---->  name --->   sonar-scanner  --->   Install Automatically ---> version ---> SonarQube Scanner -5.0.1.3006
+
+----> maven ----> Add maven ----> name ---> maven3 ---> Install Automatically ----> version ---->3.6.1
+
+
+In the same way Docker ----> name ----> docker ---> Install Automatically ---->  add installer  ---> download from docker.com ----> version ----> latest
+
+
